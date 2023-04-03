@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app_adminpanel_v1/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,13 +19,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: true,
       title: ' Flutter Grocery',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.amber,
-          centerTitle: true,
-          title: const Text("Grocery Admin Panel"),
-        ),
-        body: const Center(child: Text("Flutter Grocery Admin Panel")),
-      ),
+          appBar: AppBar(
+            backgroundColor: Colors.amber,
+            centerTitle: true,
+            title: const Text("Grocery Admin Panel"),
+          ),
+          body: const MainScreen()),
     );
   }
 }
