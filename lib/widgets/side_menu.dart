@@ -13,7 +13,11 @@ class _SideMenuState extends State<SideMenu> {
     return Drawer(
       backgroundColor: Colors.blue,
       child: ListView(
-        children: [],
+        children: [
+          DrawerHeader(
+            child: Image.asset("assets/images/groceries.png"),
+          ),
+        ],
       ),
     );
   }
