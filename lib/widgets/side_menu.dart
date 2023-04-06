@@ -35,6 +35,12 @@ class _SideMenuState extends State<SideMenu> {
             press: () {},
             icon: IconlyBold.bag_2,
           ),
+          SwitchListTile(
+            title: const Text('Theme'),
+            secondary: Icon(Icons.dark_mode_outlined),
+            value: true,
+            onChanged: (value) {},
+          )
         ],
       ),
     );
