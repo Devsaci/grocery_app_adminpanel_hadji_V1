@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screens/main_screen.dart';
 import 'text_widget.dart';
 
 class SideMenu extends StatefulWidget {
