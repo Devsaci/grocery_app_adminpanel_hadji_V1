@@ -10,6 +10,12 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Drawer(
+      backgroundColor: Colors.blue,
+      width: 50,
+      child: Container(
+        width: 100,
+      ),
+    );
   }
 }
