@@ -12,9 +12,8 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.blue,
-      width: 50,
-      child: Container(
-        width: 100,
+      child: ListView(
+        children: [],
       ),
     );
   }
