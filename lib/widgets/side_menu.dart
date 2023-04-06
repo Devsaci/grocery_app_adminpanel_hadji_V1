@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 
 import 'text_widget.dart';
 
@@ -28,6 +29,11 @@ class _SideMenuState extends State<SideMenu> {
             title: "View all product",
             press: () {},
             icon: Icons.store,
+          ),
+          DrawerListTile(
+            title: "View all order",
+            press: () {},
+            icon: IconlyBold.bag_2,
           ),
         ],
       ),
