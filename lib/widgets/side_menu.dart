@@ -24,6 +24,11 @@ class _SideMenuState extends State<SideMenu> {
             press: () {},
             icon: Icons.home_filled,
           ),
+          DrawerListTile(
+            title: "View all product",
+            press: () {},
+            icon: Icons.store,
+          ),
         ],
       ),
     );
