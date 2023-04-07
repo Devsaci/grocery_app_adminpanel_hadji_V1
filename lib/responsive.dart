@@ -14,6 +14,15 @@ class Responsive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final Size _size = MediaQuery.of(context).size;
+
+    if (_size.width >= 1100) {
+      return desktop;
+    }
+    // If width it less then 1100 and more then 850 we consider it as tablet
+    // Or less then that we called it mobile
+    else {
+      return mobile;
+    }
   }
 }
