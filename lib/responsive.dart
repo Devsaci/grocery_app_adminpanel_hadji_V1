@@ -6,6 +6,9 @@ class Responsive extends StatelessWidget {
   // final Widget? tablet;
   final Widget desktop;
 
+  static bool isMobile(BuildContext context) =>
+      MediaQuery.of(context).size.width < 850;
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
