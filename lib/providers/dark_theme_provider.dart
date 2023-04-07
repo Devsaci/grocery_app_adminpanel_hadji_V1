@@ -9,5 +9,6 @@ class DarkThemeProvider with ChangeNotifier {
   bool get getDarkTheme => _darkTheme;
   set setDarkTheme(bool value) {
     _darkTheme = value;
+    darkThemePreference.setDarkTheme(value);
   }
 }
