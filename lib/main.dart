@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
 
   DarkThemeProvider themeChangeProvider = DarkThemeProvider();
 
+  void getCurrentAppTheme() async {}
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
