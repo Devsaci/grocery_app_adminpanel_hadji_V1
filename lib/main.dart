@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
 
 void main() {
@@ -15,10 +16,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: true,
-      title: ' Flutter Grocery',
-      home: MainScreen(),
+    return MultiProvider(
+      providers: [],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: true,
+        title: ' Flutter Grocery',
+        home: MainScreen(),
+      ),
     );
   }
 }
