@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   DarkThemeProvider themeChangeProvider = DarkThemeProvider();
 
   void getCurrentAppTheme() async {
-    themeChangeProvider.darkThemePreference.getTheme();
+    await themeChangeProvider.darkThemePreference.getTheme();
   }
 
   @override
