@@ -10,5 +10,5 @@ class DarkThemeProvider with ChangeNotifier {
   set setDarkTheme(bool value) {
     _darkTheme = value;
     darkThemePreference.setDarkTheme(value);
-  }
+    notifyListeners();
 }
