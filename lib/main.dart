@@ -4,20 +4,14 @@ import '../screens/main_screen.dart';
 import 'providers/dark_theme_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   DarkThemeProvider themeChangeProvider = DarkThemeProvider();
 
-  void getCurrentAppTheme() async {}
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
