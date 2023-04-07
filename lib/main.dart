@@ -13,9 +13,8 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-void getCurrentAppTheme() async {}
-
 class _MyAppState extends State<MyApp> {
+  void getCurrentAppTheme() async {}
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
