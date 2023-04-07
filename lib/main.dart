@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
+import 'providers/dark_theme_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +15,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  DarkThemeProvider themeChangeProvider = DarkThemeProvider();
+
   void getCurrentAppTheme() async {}
   @override
   Widget build(BuildContext context) {
