@@ -31,7 +31,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [],
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) {
+            return themeChangeProvider;
+          },
+        ),
+      ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: true,
         title: ' Flutter Grocery',
