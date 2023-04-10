@@ -46,7 +46,9 @@ class _SideMenuState extends State<SideMenu> {
                 : Icons.light_mode_outlined),
             value: true,
             onChanged: (value) {
-              setState(() {});
+              setState(() {
+                themeState.setDarkTheme = value;
+              });
             },
           )
         ],
