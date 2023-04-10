@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:provider/provider.dart';
 
+import '../providers/dark_theme_provider.dart';
 import 'text_widget.dart';
 
 class SideMenu extends StatefulWidget {
@@ -13,6 +15,8 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
+    final themeState = Provider.of<DarkThemeProvider>(context);
+
     return Drawer(
       backgroundColor: Color.fromARGB(255, 146, 222, 210),
       child: ListView(
@@ -37,7 +41,9 @@ class _SideMenuState extends State<SideMenu> {
           ),
           SwitchListTile(
             title: const Text('Theme'),
-            secondary: Icon(Icons.dark_mode_outlined),
+            secondary: Icon(themeState.getDarkTheme
+                ? Icons.dark_mode_outlined
+                : Icons.light_mode_outlined),
             value: true,
             onChanged: (value) {},
           )
