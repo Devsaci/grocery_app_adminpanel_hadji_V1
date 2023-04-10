@@ -38,10 +38,14 @@ class _MyAppState extends State<MyApp> {
           },
         ),
       ],
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: true,
-        title: ' Flutter Grocery',
-        home: MainScreen(),
+      child: Consumer(
+        builder: (BuildContext context, value, Widget? child) {
+          return const MaterialApp(
+            debugShowCheckedModeBanner: true,
+            title: ' Flutter Grocery',
+            home: MainScreen(),
+          );
+        },
       ),
     );
   }
