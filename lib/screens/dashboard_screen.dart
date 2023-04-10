@@ -12,6 +12,10 @@ class DashboardScreen extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(Icons.menu),
           ),
+          Text(
+            "Dashboard",
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
         ],
       ),
     );
