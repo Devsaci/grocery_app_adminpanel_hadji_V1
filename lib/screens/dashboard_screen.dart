@@ -5,8 +5,15 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Column(),
+    return SafeArea(
+      child: Column(
+        children: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+          ),
+        ],
+      ),
     );
   }
 }
