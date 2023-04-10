@@ -3,7 +3,6 @@ import 'package:grocery_app_adminpanel_v1/consts/theme_data.dart';
 import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
 import 'providers/dark_theme_provider.dart';
-import 'consts/theme_data.dart';
 
 void main() {
   runApp(MyApp());
