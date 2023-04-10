@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/dark_theme_provider.dart';
+import '../services/utils.dart';
 import 'text_widget.dart';
 
 class SideMenu extends StatefulWidget {
@@ -15,10 +16,11 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
+    final theme = Utils(context).getTheme;
     final themeState = Provider.of<DarkThemeProvider>(context);
 
     return Drawer(
-      backgroundColor: const Color.fromARGB(255, 146, 222, 210),
+      //backgroundColor: const Color.fromARGB(255, 146, 222, 210),
       child: ListView(
         children: [
           DrawerHeader(
@@ -44,11 +46,13 @@ class _SideMenuState extends State<SideMenu> {
             secondary: Icon(themeState.getDarkTheme
                 ? Icons.dark_mode_outlined
                 : Icons.light_mode_outlined),
-            value: true,
+            value: theme,
             onChanged: (value) {
-              setState(() {
-                themeState.setDarkTheme = value;
-              });
+              setState(
+                () {
+                  themeState.setDarkTheme = value;
+                },
+              );
             },
           )
         ],
