@@ -7,17 +7,18 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Column(
         children: [
           Header(),
           Row(
             children: [
               Column(
-                children: const [
-                  // MyProductsHome(),
-                  // SizedBox(height: defaultPadding),
-                  // OrdersScreen(),
+                children: [
+                  Text(" MyProductsHome(),"),
+                  SizedBox(height: 25),
+                  Text("OrdersScreen(),"),
+                  //
                 ],
               )
             ],

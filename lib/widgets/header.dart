@@ -14,7 +14,7 @@ class Header extends StatelessWidget {
           ),
           Text(
             "Dashboard",
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ],
       ),
