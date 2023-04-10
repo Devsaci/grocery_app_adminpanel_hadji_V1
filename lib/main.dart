@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app_adminpanel_v1/consts/theme_data.dart';
 import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
 import 'providers/dark_theme_provider.dart';
+import 'consts/theme_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,11 +40,12 @@ class _MyAppState extends State<MyApp> {
           },
         ),
       ],
-      child: Consumer(
-        builder: (BuildContext context, value, Widget? child) {
-          return const MaterialApp(
+      child: Consumer<DarkThemeProvider>(
+        builder: (BuildContext context, themeProvider, Widget? child) {
+          return MaterialApp(
             debugShowCheckedModeBanner: true,
             title: ' Flutter Grocery',
+            theme: Styles.themeData(true, context),
             home: MainScreen(),
           );
         },
