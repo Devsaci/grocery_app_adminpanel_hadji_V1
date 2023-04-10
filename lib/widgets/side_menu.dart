@@ -18,7 +18,7 @@ class _SideMenuState extends State<SideMenu> {
     final themeState = Provider.of<DarkThemeProvider>(context);
 
     return Drawer(
-      backgroundColor: Color.fromARGB(255, 146, 222, 210),
+      backgroundColor: const Color.fromARGB(255, 146, 222, 210),
       child: ListView(
         children: [
           DrawerHeader(
