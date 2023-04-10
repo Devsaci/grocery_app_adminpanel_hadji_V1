@@ -45,8 +45,8 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             debugShowCheckedModeBanner: true,
             title: ' Flutter Grocery',
-            theme: Styles.themeData(true, context),
-            home: MainScreen(),
+            theme: Styles.themeData(themeProvider.getDarkTheme, context),
+            home: const MainScreen(),
           );
         },
       ),
