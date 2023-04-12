@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app_adminpanel_v1/consts/theme_data.dart';
+import '../consts/theme_data.dart';
 import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
 import 'providers/dark_theme_provider.dart';
@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -24,12 +24,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  void initState() {
-    getCurrentAppTheme();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
@@ -40,10 +34,10 @@ class _MyAppState extends State<MyApp> {
         ),
       ],
       child: Consumer<DarkThemeProvider>(
-        builder: (BuildContext context, themeProvider, Widget? child) {
+        builder: (context, themeProvider, child) {
           return MaterialApp(
-            debugShowCheckedModeBanner: true,
-            title: ' Flutter Grocery',
+            debugShowCheckedModeBanner: false,
+            title: 'Grocery',
             theme: Styles.themeData(themeProvider.getDarkTheme, context),
             home: const MainScreen(),
           );

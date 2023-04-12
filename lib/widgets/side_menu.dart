@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/dark_theme_provider.dart';
+import '../screens/main_screen.dart';
 import '../services/utils.dart';
 import 'text_widget.dart';
 
@@ -19,16 +20,24 @@ class _SideMenuState extends State<SideMenu> {
     final theme = Utils(context).getTheme;
     final themeState = Provider.of<DarkThemeProvider>(context);
 
+    final color = Utils(context).color;
     return Drawer(
-      //backgroundColor: const Color.fromARGB(255, 146, 222, 210),
       child: ListView(
         children: [
           DrawerHeader(
-            child: Image.asset("assets/images/groceries.png"),
+            child: Image.asset(
+              "assets/images/groceries.png",
+            ),
           ),
           DrawerListTile(
             title: "Main",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => const MainScreen(),
+                ),
+              );
+            },
             icon: Icons.home_filled,
           ),
           DrawerListTile(
@@ -42,19 +51,16 @@ class _SideMenuState extends State<SideMenu> {
             icon: IconlyBold.bag_2,
           ),
           SwitchListTile(
-            title: const Text('Theme'),
-            secondary: Icon(themeState.getDarkTheme
-                ? Icons.dark_mode_outlined
-                : Icons.light_mode_outlined),
-            value: theme,
-            onChanged: (value) {
-              setState(
-                () {
+              title: const Text('Theme'),
+              secondary: Icon(themeState.getDarkTheme
+                  ? Icons.dark_mode_outlined
+                  : Icons.light_mode_outlined),
+              value: theme,
+              onChanged: (value) {
+                setState(() {
                   themeState.setDarkTheme = value;
-                },
-              );
-            },
-          )
+                });
+              })
         ],
       ),
     );
