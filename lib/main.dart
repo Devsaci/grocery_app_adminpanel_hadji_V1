@@ -28,10 +28,15 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) {
-            return themeChangeProvider;
+          create: (context) {
+            MenuController();
           },
         ),
+        ChangeNotifierProvider(
+          create: (context) {
+            themeChangeProvider;
+          },
+        )
       ],
       child: Consumer<DarkThemeProvider>(
         builder: (context, themeProvider, child) {
