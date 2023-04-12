@@ -28,13 +28,13 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) {
+          create: (_) {
             MenuController();
           },
         ),
         ChangeNotifierProvider(
-          create: (context) {
-            themeChangeProvider;
+          create: (_) {
+            return themeChangeProvider;
           },
         )
       ],
