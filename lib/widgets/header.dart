@@ -6,14 +6,14 @@ import '../services/utils.dart';
 class Header extends StatelessWidget {
   const Header({
     Key? key,
-    // required this.fct,
+    required this.fct,
   }) : super(key: key);
 
-  // final Function fct;
+  final Function fct;
   @override
   Widget build(BuildContext context) {
-    final theme = Utils(context).getTheme;
-    final color = Utils(context).color;
+    // final theme = Utils(context).getTheme;
+    // final color = Utils(context).color;
 
     return Row(
       children: [
@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {
-              // fct();
+              fct();
             },
           ),
         if (Responsive.isDesktop(context))

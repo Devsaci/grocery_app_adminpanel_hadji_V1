@@ -5,11 +5,12 @@ import '../widgets/side_menu.dart';
 import 'dashboard_screen.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // key: context.read<dynamic>().getScaffoldKey,
       drawer: const SideMenu(),
       body: SafeArea(
         child: Row(

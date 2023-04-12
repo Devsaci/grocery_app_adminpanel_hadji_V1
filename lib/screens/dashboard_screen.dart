@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import '../widgets/header.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -7,14 +7,16 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            Header(),
-            SizedBox(height: 10.0),
-            Row(
+            Header(fct: () {
+              //context.read().controlDashboarkMenu();
+            }),
+            const SizedBox(height: 10.0),
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
