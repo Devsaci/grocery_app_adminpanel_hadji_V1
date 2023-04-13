@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../responsive.dart';
 import '../widgets/side_menu.dart';
 import 'dashboard_screen.dart';
-// import '../controllers/MenuController.dart' as menucontroller;
+import '../controllers/MenuController.dart' as menucontroller;
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // key: context.read<menucontroller.MenuController>().getScaffoldKey,
+      key: context.read<menucontroller.MenuController>().getScaffoldKey,
       drawer: const SideMenu(),
       body: SafeArea(
         child: Row(
