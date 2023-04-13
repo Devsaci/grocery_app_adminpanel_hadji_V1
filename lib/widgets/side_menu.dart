@@ -20,8 +20,11 @@ class _SideMenuState extends State<SideMenu> {
     final theme = Utils(context).getTheme;
     final themeState = Provider.of<DarkThemeProvider>(context);
 
-    // final color = Utils(context).color;
+    final color = Utils(context).color;
+
     return Drawer(
+      width: 200,
+      //backgroundColor: color,
       child: ListView(
         children: [
           DrawerHeader(
@@ -51,7 +54,12 @@ class _SideMenuState extends State<SideMenu> {
             icon: IconlyBold.bag_2,
           ),
           SwitchListTile(
-              title: const Text('Theme'),
+              // title: const Text(
+              //   'Theme',
+              //   style: TextStyle(fontSize: 10),
+              // ),
+              title: TextWidget(text: 'Theme', color: color),
+              activeColor: Colors.amber,
               secondary: Icon(themeState.getDarkTheme
                   ? Icons.dark_mode_outlined
                   : Icons.light_mode_outlined),
@@ -86,7 +94,7 @@ class DrawerListTile extends StatelessWidget {
         horizontalTitleGap: 0.0,
         leading: Icon(
           icon,
-          size: 18,
+          size: 15,
         ),
         title: TextWidget(
           text: title,

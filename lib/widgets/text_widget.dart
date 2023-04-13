@@ -6,7 +6,7 @@ class TextWidget extends StatelessWidget {
     Key? key,
     required this.text,
     required this.color,
-    this.textSize = 16,
+    this.textSize = 10,
     this.maxLines = 10,
     this.isTitle = false,
   }) : super(key: key);
