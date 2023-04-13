@@ -3,6 +3,7 @@ import '../consts/theme_data.dart';
 import 'package:provider/provider.dart';
 import '../screens/main_screen.dart';
 import 'providers/dark_theme_provider.dart';
+import 'controllers/MenuController.dart' as menucontroller;
 
 void main() {
   runApp(const MyApp());
@@ -28,9 +29,7 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) {
-            MenuController();
-          },
+          create: (_) => menucontroller.MenuController(),
         ),
         ChangeNotifierProvider(
           create: (_) {
