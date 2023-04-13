@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/header.dart';
+import '../controllers/MenuController.dart' as menucontroller;
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -13,7 +14,9 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           children: [
             Header(fct: () {
-              //context.read().controlDashboarkMenu();
+              context
+                  .read<menucontroller.MenuController>()
+                  .controlDashboarkMenu();
             }),
             const SizedBox(height: 10.0),
             const Row(
