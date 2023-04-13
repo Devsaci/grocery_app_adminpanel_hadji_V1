@@ -7,14 +7,14 @@ class TextWidget extends StatelessWidget {
     required this.text,
     required this.color,
     this.textSize = 10,
-    this.maxLines = 10,
+    this.maxLines = 1,
     this.isTitle = false,
   }) : super(key: key);
   final String text;
   final Color color;
   final double textSize;
   bool isTitle;
-  int maxLines = 10;
+  int maxLines = 1;
   @override
   Widget build(BuildContext context) {
     return Text(
