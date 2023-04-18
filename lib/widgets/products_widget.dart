@@ -10,6 +10,9 @@ class ProductWidget extends StatefulWidget {
 class _ProductWidgetState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Placeholder(
+      color: Colors.black87,
+      child: Container(color: Colors.amber),
+    );
   }
 }
