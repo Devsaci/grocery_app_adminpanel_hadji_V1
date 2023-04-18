@@ -16,4 +16,7 @@ https://github.com/hadikachmar3/grocery_admin_panel_course
 # github GaurCodeLab 
 https://github.com/GaurCodeLab/grocery_admin_panel
 
+# command on line 
+ flutter run -d chrome --web-renderer html
+
 
