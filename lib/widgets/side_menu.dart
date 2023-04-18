@@ -23,6 +23,8 @@ class _SideMenuState extends State<SideMenu> {
     final color = Utils(context).color;
 
     return Drawer(
+      shadowColor: Colors.blueGrey,
+      elevation: 30,
       width: 250,
       //backgroundColor: color,
       child: ListView(
