@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/header.dart';
 import '../controllers/MenuController.dart' as menucontroller;
+import '../widgets/products_widget.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -26,7 +27,7 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      Text("MyProductsHome(),"),
+                      ProductWidget(),
                       SizedBox(height: 10.0),
                       Text("OrdersScreen(),"),
                     ],
