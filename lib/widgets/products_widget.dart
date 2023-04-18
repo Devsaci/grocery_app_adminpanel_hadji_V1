@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../services/utils.dart';
+
 class ProductWidget extends StatefulWidget {
   const ProductWidget({super.key});
 
@@ -10,11 +12,33 @@ class ProductWidget extends StatefulWidget {
 class _ProductWidgetState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      borderRadius: BorderRadius.circular(12),
-      color: Theme.of(context).cardColor.withOpacity(0.9),
-      child: InkWell(
-        onTap: () {},
+    Size size = Utils(context).getScreenSize;
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(12),
+        color: Theme.of(context).cardColor.withOpacity(0.9),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(12),
+          onTap: () {},
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                    'https://www.lifepng.com/wp-content/uploads/2020/11/Apricot-Large-Single-png-hd.png',
+                    fit: BoxFit.fill,
+                    height: size.width * 0.12,
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
