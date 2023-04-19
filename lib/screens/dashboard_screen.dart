@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../consts/constants.dart';
+import '../services/utils.dart';
 import '../widgets/header.dart';
 import '../controllers/MenuController.dart' as menucontroller;
 import '../widgets/products_widget.dart';
@@ -10,6 +11,7 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = Utils(context).getScreenSize;
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
@@ -32,9 +34,9 @@ class DashboardScreen extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: 4,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 4,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: size.width < 650 ? 2 : 4,
+                          childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
                           crossAxisSpacing: defaultPadding,
                           mainAxisSpacing: defaultPadding,
                         ),
