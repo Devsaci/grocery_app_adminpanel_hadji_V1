@@ -70,9 +70,15 @@ class _ProductWidgetState extends State<ProductWidget> {
                       textSize: 18,
                     ),
                     const SizedBox(width: 7),
-                    const Visibility(
+                    Visibility(
                       visible: true,
-                      child: Text("\$3.89"),
+                      child: Text(
+                        "\$3.89",
+                        style: TextStyle(
+                          decoration: TextDecoration.lineThrough,
+                          color: color,
+                        ),
+                      ),
                     )
                   ],
                 )
