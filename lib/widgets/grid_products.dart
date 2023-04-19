@@ -21,8 +21,8 @@ class ProductGridWidget extends StatelessWidget {
       shrinkWrap: true,
       itemCount: 4,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: size.width < 650 ? 2 : 4,
-        childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: childAspectRatio,
         crossAxisSpacing: defaultPadding,
         mainAxisSpacing: defaultPadding,
       ),
