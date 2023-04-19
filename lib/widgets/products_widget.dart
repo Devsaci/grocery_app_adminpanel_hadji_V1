@@ -29,10 +29,13 @@ class _ProductWidgetState extends State<ProductWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    'https://www.lifepng.com/wp-content/uploads/2020/11/Apricot-Large-Single-png-hd.png',
-                    fit: BoxFit.fill,
-                    height: size.width * 0.12,
+                  Flexible(
+                    flex: 2,
+                    child: Image.network(
+                      'https://www.lifepng.com/wp-content/uploads/2020/11/Apricot-Large-Single-png-hd.png',
+                      fit: BoxFit.fill,
+                      height: size.width * 0.12,
+                    ),
                   ),
                 ],
               )
