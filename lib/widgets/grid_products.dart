@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../consts/constants.dart';
-import '../services/utils.dart';
 import 'products_widget.dart';
 
 class ProductGridWidget extends StatelessWidget {
@@ -15,7 +14,7 @@ class ProductGridWidget extends StatelessWidget {
   // final bool isInMain;
   @override
   Widget build(BuildContext context) {
-    Size size = Utils(context).getScreenSize;
+    //Size size = Utils(context).getScreenSize;
     return GridView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,

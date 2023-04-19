@@ -3,6 +3,7 @@ import 'package:grocery_app_adminpanel_v1/responsive.dart';
 import 'package:provider/provider.dart';
 import '../consts/constants.dart';
 import '../services/utils.dart';
+import '../widgets/grid_products.dart';
 import '../widgets/header.dart';
 import '../controllers/MenuController.dart' as menucontroller;
 import '../widgets/products_widget.dart';
@@ -24,7 +25,7 @@ class DashboardScreen extends StatelessWidget {
                   .controlDashboarkMenu();
             }),
             const SizedBox(height: 10.0),
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
@@ -32,36 +33,8 @@ class DashboardScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Responsive(
-                        mobile: GridView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: 4,
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: size.width < 650 ? 2 : 4,
-                            childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
-                            crossAxisSpacing: defaultPadding,
-                            mainAxisSpacing: defaultPadding,
-                          ),
-                          itemBuilder: (BuildContext context, int index) {
-                            return const ProductWidget();
-                          },
-                        ), // Error
-                        desktop: GridView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: 4,
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: size.width < 650 ? 2 : 4,
-                            childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
-                            crossAxisSpacing: defaultPadding,
-                            mainAxisSpacing: defaultPadding,
-                          ),
-                          itemBuilder: (BuildContext context, int index) {
-                            return const ProductWidget();
-                          },
-                        ), // Error
+                        mobile: ProductGridWidget(),
+                        desktop: ProductGridWidget(),
                       ),
                     ],
                   ),
