@@ -46,6 +46,14 @@ class _ProductWidgetState extends State<ProductWidget> {
                           value: 1,
                           child: const Text('Edit'),
                         ),
+                        PopupMenuItem(
+                          onTap: () {},
+                          value: 2,
+                          child: const Text(
+                            'Delete',
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ),
                       ],
                     )
                   ],
