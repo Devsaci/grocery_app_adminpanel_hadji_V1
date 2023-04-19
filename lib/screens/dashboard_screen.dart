@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app_adminpanel_v1/responsive.dart';
 import 'package:provider/provider.dart';
 import '../consts/constants.dart';
 import '../services/utils.dart';
@@ -30,19 +31,9 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: 4,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: size.width < 650 ? 2 : 4,
-                          childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
-                          crossAxisSpacing: defaultPadding,
-                          mainAxisSpacing: defaultPadding,
-                        ),
-                        itemBuilder: (BuildContext context, int index) {
-                          return const ProductWidget();
-                        },
+                      Responsive(
+                        mobile: mobile, // Error
+                        desktop: desktop, // Error
                       ),
                     ],
                   ),
