@@ -39,6 +39,9 @@ class _ProductWidgetState extends State<ProductWidget> {
                         height: size.width * 0.12,
                       ),
                     ),
+                    PopupMenuButton(
+                      itemBuilder: (context) => [],
+                    )
                   ],
                 )
               ],
