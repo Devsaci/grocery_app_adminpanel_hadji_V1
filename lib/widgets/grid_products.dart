@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../consts/constants.dart';
+import '../services/utils.dart';
+import 'products_widget.dart';
+
 class ProductGridWidget extends StatelessWidget {
   const ProductGridWidget({
     super.key,
@@ -11,6 +15,20 @@ class ProductGridWidget extends StatelessWidget {
   // final bool isInMain;
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    Size size = Utils(context).getScreenSize;
+    return GridView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: 4,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: size.width < 650 ? 2 : 4,
+        childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
+        crossAxisSpacing: defaultPadding,
+        mainAxisSpacing: defaultPadding,
+      ),
+      itemBuilder: (BuildContext context, int index) {
+        return const ProductWidget();
+      },
+    );
   }
 }
