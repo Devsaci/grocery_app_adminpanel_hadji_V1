@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../consts/constants.dart';
 import '../widgets/header.dart';
 import '../controllers/MenuController.dart' as menucontroller;
 import '../widgets/products_widget.dart';
@@ -34,6 +35,8 @@ class DashboardScreen extends StatelessWidget {
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 4,
+                          crossAxisSpacing: defaultPadding,
+                          mainAxisSpacing: defaultPadding,
                         ),
                         itemBuilder: (BuildContext context, int index) {
                           return const ProductWidget();
