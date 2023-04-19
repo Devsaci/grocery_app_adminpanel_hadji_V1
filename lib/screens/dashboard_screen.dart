@@ -20,16 +20,25 @@ class DashboardScreen extends StatelessWidget {
                   .controlDashboarkMenu();
             }),
             const SizedBox(height: 10.0),
-            const Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,
                   child: Column(
                     children: [
-                      ProductWidget(),
-                      SizedBox(height: 10.0),
-                      Text("OrdersScreen(),"),
+                      GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 4,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 4,
+                        ),
+                        itemBuilder: (BuildContext context, int index) {
+                          return const ProductWidget();
+                        },
+                      ),
                     ],
                   ),
                 ),
