@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../services/utils.dart';
+import 'text_widget.dart';
 
 class ProductWidget extends StatefulWidget {
   const ProductWidget({super.key});
@@ -13,6 +14,7 @@ class _ProductWidgetState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
     Size size = Utils(context).getScreenSize;
+    final color = Utils(context).color;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Material(
@@ -39,6 +41,7 @@ class _ProductWidgetState extends State<ProductWidget> {
                         height: size.width * 0.12,
                       ),
                     ),
+                    const Spacer(),
                     PopupMenuButton(
                       itemBuilder: (context) => [
                         PopupMenuItem(
@@ -56,6 +59,16 @@ class _ProductWidgetState extends State<ProductWidget> {
                         ),
                       ],
                     )
+                  ],
+                ),
+                const SizedBox(height: 2),
+                Row(
+                  children: [
+                    TextWidget(
+                      text: '\$1.99',
+                      color: color,
+                      textSize: 18,
+                    ),
                   ],
                 )
               ],
