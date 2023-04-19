@@ -79,9 +79,22 @@ class _ProductWidgetState extends State<ProductWidget> {
                           color: color,
                         ),
                       ),
-                    )
+                    ),
+                    const Spacer(),
+                    TextWidget(
+                      text: '1Kg',
+                      color: color,
+                      textSize: 18,
+                    ),
                   ],
-                )
+                ),
+                const SizedBox(height: 2),
+                TextWidget(
+                  text: 'Title',
+                  color: color,
+                  textSize: 24,
+                  isTitle: true,
+                ),
               ],
             ),
           ),
