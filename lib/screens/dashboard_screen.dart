@@ -32,8 +32,36 @@ class DashboardScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Responsive(
-                        mobile: mobile, // Error
-                        desktop: desktop, // Error
+                        mobile: GridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: 4,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: size.width < 650 ? 2 : 4,
+                            childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
+                            crossAxisSpacing: defaultPadding,
+                            mainAxisSpacing: defaultPadding,
+                          ),
+                          itemBuilder: (BuildContext context, int index) {
+                            return const ProductWidget();
+                          },
+                        ), // Error
+                        desktop: GridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: 4,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: size.width < 650 ? 2 : 4,
+                            childAspectRatio: size.width < 1100 ? 0.8 : 1.00,
+                            crossAxisSpacing: defaultPadding,
+                            mainAxisSpacing: defaultPadding,
+                          ),
+                          itemBuilder: (BuildContext context, int index) {
+                            return const ProductWidget();
+                          },
+                        ), // Error
                       ),
                     ],
                   ),
